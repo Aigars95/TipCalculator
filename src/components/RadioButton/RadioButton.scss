@@ -1,0 +1,35 @@
+.radio__button{
+  border-radius: 5px;
+  width: 100%;
+  height: 43px;
+  position: relative;
+  overflow: hidden;
+}
+
+.radio__label,
+.radio__input{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.radio__input{
+  display: none;
+}
+
+.radio__label{
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+

@@ -1,0 +1,46 @@
+.data__container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.tip__container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.input__data{
+  padding: 5px 10px;
+  border: none;
+  background-color: #D7DFF5;
+  border-radius: 5px;
+  font-size: 24px;
+  width: 100%;
+  font-family: 'Space Mono', monospace, sans-serif;
+  color: #00474B;
+  font-weight: bold;
+  text-align: right;
+}
+
+
+
+.input__label{
+  text-align: left;
+  color: #3C3F41;
+  font-weight: bold;
+  position: relative;
+}
+
+.label__text{
+
+}
+
+.input__icon{
+  position: absolute;
+  left: 16px;
+  top: 40px;
+
+}

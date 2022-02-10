@@ -1,0 +1,31 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #C5E4E7;
+}
+.main__container{
+  max-width: 850px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+
+
+.output__container{
+  background-color: #00474B;
+  border-radius: 20px;
+
+}
