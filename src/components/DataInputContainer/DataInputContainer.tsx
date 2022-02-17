@@ -3,7 +3,6 @@ import './DataInputContainer.scss';
 import personIcon from '../../assets/images/icon-person.svg';
 import dollarIcon from '../../assets/images/icon-dollar.svg';
 import RadioButton from '../RadioButton/RadioButton';
-import dataOutputContainer from '../DataOutputContainer/DataOutputContainer';
 
 type DataInputContainerProps ={
   getTipsAndTotalAmounts: (tips: number, total: number) =>void;
@@ -30,6 +29,7 @@ const DataInputContainer = ({ getTipsAndTotalAmounts, dataReset, getResetStatus 
   };
 
   const handleRadioClick = (radioValue: string) => {
+    setTipsPercentInput('');
     setSelectedRadioBtn(radioValue);
   };
   useEffect(() => {
@@ -37,16 +37,12 @@ const DataInputContainer = ({ getTipsAndTotalAmounts, dataReset, getResetStatus 
   }, [dataReset]);
 
   useEffect(() => {
-    if (tipsPercentInput !== '') {
-      setSelectedRadioBtn('');
-      tipPercent = parseFloat(tipsPercentInput);
-    }
-  }, [tipsPercentInput]);
-
-  useEffect(() => {
     if (bill && peopleCount && (tipsPercentInput || selectedRadioBtn)) {
-      if (!tipsPercentInput) {
-        tipPercent = parseFloat(selectedRadioBtn);
+      tipPercent = parseFloat(selectedRadioBtn);
+
+      if (tipsPercentInput) {
+        setSelectedRadioBtn('');
+        tipPercent = parseFloat(tipsPercentInput);
       }
 
       let tips = ((parseFloat(bill) * tipPercent) / 100) / parseFloat(peopleCount);

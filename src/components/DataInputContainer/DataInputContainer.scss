@@ -25,8 +25,6 @@
   text-align: right;
 }
 
-
-
 .input__label{
   text-align: left;
   color: #3C3F41;
@@ -34,13 +32,17 @@
   position: relative;
 }
 
-.label__text{
-
-}
-
 .input__icon{
   position: absolute;
   left: 16px;
   top: 40px;
+
+}
+
+@media only screen and (max-width: 730px) {
+  .output__container{
+    padding: 30px 40px;
+    gap: 40px;
+  }
 
 }

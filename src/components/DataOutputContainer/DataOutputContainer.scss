@@ -3,6 +3,8 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 50px 40px;
+  background-color: #00474B;
+  border-radius: 20px;
 }
 
 .output__row__wrapper{
@@ -32,4 +34,12 @@
   color: hsl(172, 67%, 45%);
   font-weight: bold;
   font-size: 33px;
+}
+
+@media only screen and (max-width: 730px) {
+  .output__container{
+    padding: 30px 40px;
+    gap: 40px;
+  }
+
 }

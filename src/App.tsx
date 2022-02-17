@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.scss';
 import DataInputContainer from './components/DataInputContainer/DataInputContainer';
 import DataOutputContainer from './components/DataOutputContainer/DataOutputContainer';
+import logo from './assets/images/logo.svg';
 
 const App = () => {
   const [tipsAndTotalAmount, setTipsAndTotalAmount] = useState({ tips: 0, total: 0 });
@@ -15,6 +16,9 @@ const App = () => {
   };
   return (
     <div className="App">
+      <div className="logo">
+        <img src={logo} alt="Logo" />
+      </div>
       <div className="main__container">
         <DataInputContainer getTipsAndTotalAmounts={handlerTipsAndTotalAmounts} dataReset={resetStatus} getResetStatus={handlerReset} />
         <DataOutputContainer tipsAndTotalAmounts={tipsAndTotalAmount} getResetStatus={handlerReset} />
